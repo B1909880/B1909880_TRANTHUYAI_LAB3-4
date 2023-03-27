@@ -1,6 +1,6 @@
 <template>
   <div class="page row">
-    <div class="col-md-10">
+    <div class=" mt-3 col-md-10">
       <InputSearch v-model="searchText" />
     </div>
     <div class="mt-3 col-md-6">
@@ -58,6 +58,13 @@ export default {
       searchText: "",
     };
   },
+  watch: {
+      // Giám sát các thay đổi của biến searchText.
+      // Bỏ chọn phần tử đang được chọn trong danh sách.
+      searchText() {
+      this.activeIndex = -1;
+      },
+      },
   computed: {
     // Chuyển các đối tượng contact thành chuỗi để tiện cho tìm kiếm.
     contactStrings() {

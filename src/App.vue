@@ -40,10 +40,12 @@ header {
     place-items: flex-start;
     flex-wrap: wrap;
   }
-}
-
+} 
+</style>
+<style>
 .page {
   max-width: 400px;
   margin: auto;
 }
 </style>
+
